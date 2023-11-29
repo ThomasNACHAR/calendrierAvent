@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Le décor ! */
+
+/* .snow {
+    height: 50vh;
+}
+
+.snow1 {
+    background: white;
+    width: 40%;
+    height: 50vh;
+    border-top: 5px solid black;
+    border-top-right-radius: 10vh;
+}
+
+.snow2 {
+    width: 20%;
+}
+
+.snow21 {
+    height: 10vh;
+}
+
+.snow22 {
+    background: white;
+    height: 40vh;
+    border-top: 5px solid black;
+    border-top-right-radius: 20vh;
+}
+
+.snow3 {
+    width: 35%;
+}
+
+.snow31 {
+    height: 25vh;
+}
+
+.snow32 {
+    background: white;
+    height: 25vh;
+    border-top: 5px solid black;
+    border-top-right-radius: 20vh;
+}
+
+.snow4 {
+    width: 5%;
+}
+
+.snow41 {
+    height: 47vh;
+}
+
+.snow42 {
+    background: white;
+    height: 3vh;
+    border-top: 5px solid black;
+    border-top-right-radius: 30vh;
+} */
+
+
+/* Le reste ! */
+
+body {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+    'header'
+    'main'
+    'footer';
+    background: linear-gradient(180deg, black, blue);
+    
+}
+
+.container {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+
+.case {
+height: 200px;
+width: 200px;
+text-align: center;
+background-color: red;
+display: flex;
+justify-content: center;
+align-items: center;
+border: 5px solid black;
+border-radius: 3vh;
+} 
