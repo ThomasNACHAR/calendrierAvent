@@ -3,6 +3,12 @@
     padding: 0;
 }
 
+:root {
+
+    --survol: rotateY(-45deg);
+    --ouverture: none;
+}
+
 /* Le décor ! */
 
 /* .snow {
@@ -77,6 +83,13 @@ body {
     
 }
 
+header {
+    color: white;
+    grid-area: 'header';
+    display: flex;
+    justify-content: center;
+}
+
 .container {
     grid-area: main;
     display: grid;
@@ -94,4 +107,18 @@ justify-content: center;
 align-items: center;
 border: 5px solid black;
 border-radius: 3vh;
+transition: transform 1s, width 3s, height 3s;
 } 
+
+
+.case:hover {
+    transform: var(--survol);
+}
+
+
+
+
+
+
+/* Animations ! */
+
