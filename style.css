@@ -5,7 +5,7 @@
 
 :root {
 
-    --survol: rotateY(-45deg);
+    --survol: rotateY(-60deg);
     --ouverture: none;
 }
 
@@ -90,14 +90,59 @@ header {
     justify-content: center;
 }
 
+main {
+    display: grid;
+}
+
+/* Les cases ! */
+
 .container {
-    grid-area: main;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 20px;
 }
 
+/* Cases blanches */
+.container1 {
+    grid-area: main;
+    z-index: -10;
+}
+
+/* Cases rouges */
+.container2 {
+    grid-area: main;
+}
+
+/* Le numéro de case ! */
+
+.case p {
+    font-size: 100px;
+    font-weight: 1000;
+    color: white;
+}
+
+/* Le fond des cases */
+
+.fond {
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    background-color: white;
+    border-radius: 3vh;
+}
+
+.closed {
+    position: absolute;
+    z-index: -1;
+    height: 200px;
+    width: 150px;
+    background-color: red;
+    border-radius: 3vh;
+}
+
 .case {
+position: relative;
+top: 0;
 height: 200px;
 width: 200px;
 text-align: center;
@@ -105,13 +150,13 @@ background-color: red;
 display: flex;
 justify-content: center;
 align-items: center;
-border: 5px solid black;
 border-radius: 3vh;
 transition: transform 1s, width 3s, height 3s;
 } 
 
 
 .case:hover {
+    
     transform: var(--survol);
 }
 
